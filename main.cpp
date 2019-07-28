@@ -3,7 +3,7 @@
 #include<string>
 #include "Field.h"
 
-#define MAP_SIZE 20
+int MAP_SIZE = 20;
 
 using namespace std;
 
