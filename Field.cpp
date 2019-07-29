@@ -5,6 +5,7 @@ using namespace std;
 Field::Field(int SIZE) : size(SIZE)
 {
 	Snake* severus = new Snake();
+	s = severus; // да-да, костыли, жду предложений
 	Apple* nyamnyam = new Apple();
 	objects.push_back(severus);
 	objects.push_back(nyamnyam);
@@ -14,7 +15,7 @@ Field::Field(int SIZE) : size(SIZE)
 		map[i] = new char[size];
 		for (int j = 0; j < size; j++)
 		{
-			map[i][j] = '*';
+			map[i][j] = FIELD_SYM;
 		}
 		map[i][size] = '\0';
 	}
@@ -37,7 +38,7 @@ char** Field::UpdateMap()
 {
 	for (int i = 0; i < size; i++)
 		for (int j = 0; j < size; j++)
-			map[i][j] = '*';
+			map[i][j] = FIELD_SYM;
 	
 	for (IObject* ob : objects)
 	{
@@ -47,5 +48,7 @@ char** Field::UpdateMap()
 		for (XY coords : shape)
 			map[coords.x][coords.y] = sym;
 	}
+	
+	s->step();
 	return map;
 }

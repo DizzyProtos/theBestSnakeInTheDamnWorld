@@ -7,19 +7,26 @@ int MAP_SIZE = 20;
 
 using namespace std;
 
-int main()
+
+void paint(Field& field)
 {
 	ostringstream oss;
-
-	Field field(MAP_SIZE);
 	char** map = field.UpdateMap();
-	for (int i = 0;i< MAP_SIZE;i++)
-	{
-		//string currStr = "";
-		//currStr.append(map[i]);
-		//cout << currStr << endl;
+
+	for (int i = 0; i < MAP_SIZE; i++)
 		oss << map[i] << endl;
-	}
 	cout << oss.str();
+	cout << endl;
+}
+
+int main()
+{
+	Field field(MAP_SIZE);
+
+	paint(field);
+	cin.get();
+	paint(field);
+	cin.get();	
+	paint(field);
 	cin.get();
 }
