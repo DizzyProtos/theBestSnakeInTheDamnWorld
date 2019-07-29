@@ -11,7 +11,7 @@ class Field
 private:
 	int size;
 
-	Snake* s; // я знаю, что это варварство
+	Snake* s; // СЏ Р·РЅР°СЋ, С‡С‚Рѕ СЌС‚Рѕ РІР°СЂРІР°СЂСЃС‚РІРѕ
 
 	std::vector<IObject*> objects;
 	char** map;
