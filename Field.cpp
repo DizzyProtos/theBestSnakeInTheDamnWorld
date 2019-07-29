@@ -5,7 +5,7 @@ using namespace std;
 Field::Field(int SIZE) : size(SIZE)
 {
 	Snake* severus = new Snake();
-	s = severus; // да-да, костыли, жду предложений
+	s = severus; // РґР°-РґР°, РєРѕСЃС‚С‹Р»Рё, Р¶РґСѓ РїСЂРµРґР»РѕР¶РµРЅРёР№
 	Apple* nyamnyam = new Apple();
 	objects.push_back(severus);
 	objects.push_back(nyamnyam);
