@@ -2,6 +2,10 @@
 
 #include <vector>
 
+#define SNAKE_SYM 'z'
+#define APPLE_SYM 'o'
+#define FIELD_SYM '*'
+
 struct XY
 {
 	int x;

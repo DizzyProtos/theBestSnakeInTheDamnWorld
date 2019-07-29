@@ -14,7 +14,7 @@ Apple::~Apple()
 
 }
 
-char Apple::GetSymbol() { return 'o'; }
+char Apple::GetSymbol() { return APPLE_SYM; }
 
 bool Apple::Collide(IObject *second)
 {

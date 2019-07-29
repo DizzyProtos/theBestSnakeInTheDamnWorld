@@ -10,6 +10,9 @@ class Field
 {
 private:
 	int size;
+
+	Snake* s; // я знаю, что это варварство
+
 	std::vector<IObject*> objects;
 	char** map;
 public:
@@ -17,5 +20,7 @@ public:
 	~Field();
 
 	char** UpdateMap();
+
+
 };
 
