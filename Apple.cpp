@@ -2,9 +2,9 @@
 #include "Snake.h"
 
 
-Apple::Apple()
+Apple::Apple(int mapSize)
 {
-	XY head = newCell();
+	XY head = newCell(mapSize);
 	body.push_back(head);
 }
 
@@ -26,8 +26,8 @@ std::vector<XY>& Apple::GetShape()
 	return body;
 }
 
-XY Apple::newCell()
+XY Apple::newCell(int mapSize)
 {
 	srand(time(NULL));
-	return {rand() % MAP_SIZE, rand() % MAP_SIZE};	
+	return {rand() % mapSize, rand() % mapSize};
 }
