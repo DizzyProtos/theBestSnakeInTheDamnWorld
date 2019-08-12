@@ -1389,7 +1389,6 @@ protected:
 };
 
 // Define our static variables
-//Должны определяться статические переменные, но если убрать коммент компилятор ругается.
-/*std::atomic<bool> olcConsoleGameEngine::m_bAtomActive = false;
+std::atomic<bool> olcConsoleGameEngine::m_bAtomActive = false;
 std::condition_variable olcConsoleGameEngine::m_cvGameFinished;
-std::mutex olcConsoleGameEngine::m_muxGame;*/
+std::mutex olcConsoleGameEngine::m_muxGame;
