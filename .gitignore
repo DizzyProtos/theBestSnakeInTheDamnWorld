@@ -2,3 +2,6 @@ LocalSnakeApp*
 x64
 x86
 desktop.ini
+*.vcxproj
+*.vcxproj.*
+Debug/*
