@@ -1,32 +1,15 @@
 #include<iostream>
 #include<sstream>
 #include<string>
-#include "Field.h"
-
-int MAP_SIZE = 20;
-
-using namespace std;
-
-
-void paint(Field& field)
-{
-	ostringstream oss;
-	char** map = field.UpdateMap();
-
-	for (int i = 0; i < MAP_SIZE; i++)
-		oss << map[i] << endl;
-	cout << oss.str();
-	cout << endl;
-}
+#include "SnakeApp.h"
 
 int main()
 {
-	Field field(MAP_SIZE);
-
-	paint(field);
-	cin.get();
-	paint(field);
-	cin.get();	
-	paint(field);
-	cin.get();
+	const int mapSize = 20;
+	SnakeApp game(mapSize);
+	// Create a console with resolution 160x100 characters
+	// Each character occupies 8x8 pixels
+	game.ConstructConsole(mapSize, mapSize, 16, 16);
+	game.Start();
+	return 0;
 }
