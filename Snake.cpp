@@ -21,6 +21,15 @@ bool Snake::Collide(IObject *second)
 
 std::vector<XY>& Snake::GetShape() { return body; }
 
+bool Snake::HandleKey(short keyCode)
+{
+	switch (keyCode)
+	{
+	case 12:
+		break;
+	}
+}
+
 moving Snake::isDirection() { return nowDir; }
 void Snake::setDirection(moving newDir) { nowDir = newDir; }
 

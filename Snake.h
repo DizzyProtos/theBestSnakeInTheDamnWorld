@@ -26,6 +26,7 @@ public:
 	char GetSymbol() override;
 	bool Collide(IObject *second) override;
 	std::vector<XY>& GetShape() override;
+	bool HandleKey(short keyCode) override;
 
 	moving isDirection();
 	void setDirection(moving newDir);
