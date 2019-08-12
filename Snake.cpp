@@ -23,11 +23,29 @@ std::vector<XY>& Snake::GetShape() { return body; }
 
 bool Snake::HandleKey(short keyCode)
 {
+	if (keyCode < 0)
+	{ 
+		return false;
+	}
+
 	switch (keyCode)
 	{
-	case 12:
+	case 87://W
+		step(moving::left);
 		break;
+	case 68://D
+		step(moving::up);
+		break;
+	case 83://S
+		step(moving::right);
+		break;
+	case 65://A
+		step(moving::down);
+		break;
+	default:
+		return false;
 	}
+	return true;
 }
 
 moving Snake::isDirection() { return nowDir; }
