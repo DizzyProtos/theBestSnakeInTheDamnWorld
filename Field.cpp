@@ -34,7 +34,7 @@ Field::~Field()
 
 }
 
-char** Field::UpdateMap()
+char** Field::UpdateMap(short keyCode, float elapsedTime)
 {
 	for (int i = 0; i < size; i++)
 		for (int j = 0; j < size; j++)
@@ -42,6 +42,8 @@ char** Field::UpdateMap()
 
 	for (IObject* ob : objects)
 	{
+		ob->SetTime(elapsedTime);
+		ob->HandleKey(keyCode);
 		std::vector<XY> shape = ob->GetShape();
 		char sym = ob->GetSymbol();
 

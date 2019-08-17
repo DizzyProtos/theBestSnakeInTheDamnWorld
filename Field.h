@@ -19,7 +19,7 @@ public:
 	Field(int SIZE);
 	~Field();
 
-	char** UpdateMap();
+	char** UpdateMap(short keyCode, float elapsedTime);
 
 
 };
